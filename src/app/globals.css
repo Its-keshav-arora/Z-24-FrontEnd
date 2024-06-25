@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Barbarian';
+  src: url('Bombardier-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('Nohemi-Light-2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,6 +38,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    /* font-family: 'Bombardier' !important; */
+    font-family: "Nohemi" !important;
+}
+
+body h1
+{
+  font-family: "Barbarian" !important;
 }
 
 @layer utilities {
@@ -31,3 +52,213 @@ body {
     text-wrap: balance;
   }
 }
+
+.footer {
+  width: 100%;
+  height: 52vh;
+  font-family: "Barbarian" !important;
+  letter-spacing: 2px;
+   background-image: url("/public/images/Vector 138.svg");
+  background: linear-gradient(
+    165.17deg,
+    rgba(66, 59, 59, 0.5) 10.31%,
+    rgba(66, 59, 59, 0.3) 88.37%
+  );
+  border: 3px solid #960f1a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.festImage
+{
+  height:10rem;
+  padding-left: 2rem;
+}
+
+main
+{
+  position: relative;
+  min-height: 200vh;
+  overflow-x: hidden !important;
+}
+
+.hexagonImage
+{
+  position:absolute;
+  bottom:2rem;
+  right:-5rem;
+  z-index: 1;
+  height:15%;
+  max-height: 15rem;
+}
+
+@media(max-width:1220px)
+{
+  .footer
+  {
+    height:59vh;
+  }
+  .textBelowImage
+  {
+    display:none;
+  }
+  .footerBtn{
+    display:none;
+  }
+  .socials
+  {
+    width:100%;
+    padding:1rem;
+    text-align: center;
+    position: relative;
+    right:2rem;
+  }
+  .socials div
+  {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .socials div a 
+  {
+    position:relative;
+    left:2rem;
+  }
+  .contactUs 
+  {
+    display:block;
+    line-height: 1.5rem;
+  }
+  .Details p
+  {
+    font-size: 1rem ;
+  }
+  .Details h1
+  {
+    font-size: 1.2rem;
+  }
+  .Details
+  {
+    justify-content: space-between;
+    padding:2rem 2rem 0 2rem;
+  }
+  .festImage
+{
+  height:100%;
+  width:27%;
+  min-width: 240px;
+}
+.hexagonImage
+{
+  height:10%;
+  max-height: 15rem;
+}
+}
+
+@media(max-width:730px)
+{
+  .footer
+  {
+    height:67vh;
+  }
+  .festImage
+  {
+    height:80%;
+    width:80%;
+    min-width: 180px;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .footer
+  {
+    height:60vh;
+    letter-spacing: 1px;
+  }
+  .Details p
+  {
+    font-size: 1rem ;
+  }
+  .Details h1
+  {
+    font-size: 1.3rem;
+  }
+  .festImage
+  {
+    padding-right: 1rem;
+    height:auto;
+    width:100%;
+  }
+  .Details
+  {
+    padding:0 0rem 0 0rem;
+  }
+  .hexagonImage
+  {
+    height:10%;
+    max-height: 11rem;
+  }
+
+}
+
+@media (max-width:520px)
+{
+  .Details p
+  {
+    font-size: 0.9rem ;
+  }
+  .Details h1
+  {
+    font-size: 1.1rem;
+  }
+  .footer
+  {
+    height:60vh;
+  }
+}
+
+@media(max-width:414px)
+{
+  .footer
+  {
+    height:67vh;
+  }
+}
+
+/*
+
+  .footerBtn{
+    display:none;
+  }
+  .socials
+  {
+    width:100%;
+    padding:1rem;
+    text-align: center;
+  }
+  .socials div
+  {
+    display:flex;
+    justify-content: space-around;
+  }
+  .contactUs 
+  {
+    display:block;
+
+  }
+  .Details p
+  {
+    font-size: 0.8rem ;
+  }
+  .Details h1
+  {
+    font-size: 1rem;
+  }
+  .Details
+  {
+    justify-content: space-between;
+  }
+
+*/
